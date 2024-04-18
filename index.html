@@ -23,15 +23,10 @@
         <h1>Portafolio de Eduardo Gil</h1>
         <nav>
             <a href="#experiencia">Experiencia</a>
-            <a 
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/pisangas">GitHub</a>
+            <a target="_blank" rel="noreferrer" href="https://github.com/pisangas">GitHub</a>
         </nav>
-    </header>
-    <main>
-        <img id="photo-creator" width="150" height="150" title="Eduardo's photo" alt="Eduardo's photo"
-            src="/images/profile.png">
+    </header>    
+    <main>       
 
         <h2>Sobre mi</h2>
         <p><strong>Especialista en Ingenieria de Software</strong>, apasionado por el desarrollo de software. Me encanta
@@ -45,6 +40,11 @@
             pasar tiempo con mi familia y amigos. Si estás buscando un ingeniero de software apasionado, creativo y con
             experiencia, no dudes en contactarme.</p>
 
+            <a download href="/images/profile.png">
+                <img id="photo-creator" width="150" height="150" title="Eduardo's photo" alt="Eduardo's photo"
+                    src="/images/profile.png">
+            </a>
+
         <h2 id="experiencia">Experiencia</h2>
         <ul>
             <li class="list-item-experience">Mobiletec</li>
@@ -52,14 +52,95 @@
         </ul>
 
         <h2 id="tecnologias">Mis tecnologias favoritas</h2>
-        <ul>
+        <ol type="1">
             <li class="list-item-favorites-tecnologies">HTML</li>
             <li class="list-item-favorites-tecnologies">CSS</li>
             <li class="list-item-favorites-tecnologies">Javascript</li>
             <li class="list-item-favorites-tecnologies">Node.js</li>
             <li class="list-item-favorites-tecnologies">.NET C#</li>
-        </ul>
-        
+        </ol>
+
+        <button>
+            Haz clic aqui
+        </button>
+
+        <section>
+            <h2>Preguntas Frecuentes</h2>
+
+            <details open>
+                <summary>¿Cual es tu formación acádemica?</summary>
+                <p>Información....</p>                
+            </details>
+            <details>
+                <summary>¿Cual es tu lenguaje favorito?</summary>
+                <p>Información....</p>                
+            </details>
+            <details>
+                <summary>¿Cuales son tus hobbies?</summary>
+                <p>Información....</p>                
+            </details>
+        </section>
+
+        <section>
+            <h2>Contactame</h2>
+            <form method="post" action="/">
+                <fieldset>
+                    <legend>Información Personal</legend>
+                    <div>
+                        <label>Nombre:
+                            <input type="text" name="name" placeholder="Eduardo Gil" required>
+                        </label>
+                    </div>
+
+                    <label>E-mail:
+                        <input type="email" name="email" placeholder="pisangas@gmail.com" required>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Información Adicinal</legend>
+                    <label>Teléfono:
+                        <input type="tel" name="phone" placeholder="3017390149" required pattern="[0-9]{9}">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Otros</legend>
+                    <div>
+                        <label for="why">¿Por que quieres contactarme?</label>
+                        <select name="why" id="why">
+                            <option value="1">Trabajo</option>
+                            <option value="2">Dudas</option>
+                            <option value="3">Más Información</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>¿Aceptas los términos?
+                            <input type="checkbox" id="terms" name="terms" required>
+                        </label>
+                    </div>
+                    <div>
+                        <datalist id="languajes">
+                            <option value="HTML"></option>
+                            <option value="CSS"></option>
+                            <option value="Javascript"></option>
+                            <option value="Node.js"></option>
+                            <option value=".NET C#"></option>
+                        </datalist>
+                        <label>¿Con cuál que lenguaje requieres ayuda?
+                            <input list="languajes" name="languajes">
+                        </label>
+                    </div>
+                </fieldset>
+                <button type="submit">Enviar Contacto</button>
+            </form>
+
+        </section>
+
+
+
+
+
+
+
 
 
 
@@ -67,7 +148,9 @@
 
     </main>
     <footer>
-        Copyright © 2024 
+        Copyright © 2024
+        <a href="mailto:pisangas@gmail.com">Enviame un correo</a>
     </footer>
 </body>
+
 </html>
